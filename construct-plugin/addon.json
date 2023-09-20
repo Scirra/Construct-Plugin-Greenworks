@@ -1,0 +1,39 @@
+﻿{
+	"is-c3-addon": true,
+	"type": "plugin",
+	"name": "Greenworks",
+	"id": "Greenworks",
+	"version": "1.0.79.0",
+	"author": "Scirra",
+	"website": "https://www.construct.net",
+	"documentation": "https://www.construct.net",
+	"description": "Access the Steamworks API from NW.js.",
+	"editor-scripts": [
+						"plugin.js",
+						"type.js",
+						"instance.js"
+					],
+	"file-list": [
+		"c2runtime/greenworks.js",
+		"c2runtime/runtime.js",
+		"c3runtime/plugin.js",
+		"c3runtime/type.js",
+		"c3runtime/instance.js",
+		"c3runtime/conditions.js",
+		"c3runtime/actions.js",
+		"c3runtime/expressions.js",
+		"c3runtime/domSide.js",
+		"lang/en-US.json",
+		"aces.json",
+		"addon.json",
+		"greenworks-linux32.node",
+		"greenworks-linux64.node",
+		"greenworks-osx64.node",
+		"greenworks-win32.node",
+		"greenworks-win64.node",
+		"icon.svg",
+		"plugin.js",
+		"type.js",
+		"instance.js"
+	]
+}

@@ -1,0 +1,112 @@
+﻿{
+	"languageTag": "en-US",
+	"fileDescription": "Strings for the Greenworks plugin.",
+	"text": {
+		"plugins": {
+			"greenworks": {
+				"name": "Greenworks",
+				"description": "Access the Steamworks API from NW.js.",
+				"help-url": "https://www.construct.net",
+				"aceCategories": {
+					"steam": "Steam",
+					"user-info": "User info"
+				},
+				"conditions": {
+					"is-available": {
+						"list-name": "Is available",
+						"display-text": "Is available",
+						"description": "True if successfully initialised the Steam API."
+					},
+					"on-achievement-activate-success": {
+						"list-name": "On achievement activate success",
+						"display-text": "On achievement activate success",
+						"description": "Triggered after 'Activate achievement' if the activation completed successfully."
+					},
+					"on-achievement-activate-error": {
+						"list-name": "On achievement activate error",
+						"display-text": "On achievement activate error",
+						"description": "Triggered after 'Activate achievement' if the activation failed."
+					},
+					"is-overlay-enabled": {
+						"list-name": "Is overlay enabled",
+						"display-text": "Is overlay enabled",
+						"description": "True if the Steam game overlay is currently enabled."
+					},
+					"on-overlay-activated": {
+						"list-name": "On overlay activated",
+						"display-text": "On overlay activated",
+						"description": "Triggered when the game overlay is shown."
+					},
+					"on-overlay-deactivated": {
+						"list-name": "On overlay deactivated",
+						"display-text": "On overlay deactivated",
+						"description": "Triggered when the game overlay is hidden."
+					}
+				},
+				"actions": {
+					"activate-achievement": {
+						"list-name": "Activate achievement",
+						"display-text": "Activate achievement [b]{0}[/b]",
+						"description": "Activate a Steam achievement.",
+						"params": {
+							"achievement": {
+								"name": "Achievement",
+								"desc": "API name of the achievement."
+							}
+						}
+					},
+					"activate-overlay": {
+						"list-name": "Activate overlay",
+						"display-text": "Activate overlay for [b]{0}[/b]",
+						"description": "Activate the Steam game overlay.",
+						"params": {
+							"option": {
+								"name": "Option",
+								"desc": "The overlay section to display.",
+								"items": {
+									"friends": "Friends",
+									"community": "Community",
+									"players": "Players",
+									"settings": "Settings",
+									"official-game-group": "Official Game Group",
+									"stats": "Stats",
+									"achievements": "Achievements"
+								}
+							}
+						}
+					}
+				},
+				"expressions": {
+					"account-id": {
+						"description": "The current user's Steam account ID.",
+						"translated-name": "AccountID"
+					},
+					"static-account-id": {
+						"description": "The current user's Steam static account ID.",
+						"translated-name": "StaticAccountID"
+					},
+					"static-account-id-str": {
+						"description": "The current user's Steam static account ID as a string.",
+						"translated-name": "StaticAccountIDStr"
+					},
+					"screen-name": {
+						"description": "The current user's Steam screen name.",
+						"translated-name": "ScreenName"
+					},
+					"user-level": {
+						"description": "The current user's Steam level.",
+						"translated-name": "UserLevel"
+					},
+					"game-language": {
+						"description": "The language set specifically for the game.",
+						"translated-name": "GameLanguage"
+					},
+					"ui-language": {
+						"description": "The language set for the Steam UI.",
+						"translated-name": "UILanguage"
+					}
+				}
+			}
+		}
+	}
+}

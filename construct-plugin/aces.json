@@ -1,0 +1,90 @@
+﻿{
+	"steam": {
+		"conditions": [
+			{
+				"id": "is-available",			"c2id": 0,
+				"scriptName": "IsAvailable"
+			},
+			{
+				"id": "on-achievement-activate-success",		"c2id": 1,
+				"scriptName": "OnAchievementActivateSuccess",
+				"isTrigger": true
+			},
+			{
+				"id": "on-achievement-activate-error",		"c2id": 2,
+				"scriptName": "OnAchievementActivateError",
+				"isTrigger": true
+			},
+			{
+				"id": "is-overlay-enabled",			"c2id": 3,
+				"scriptName": "IsOverlayEnabled"
+			},
+			{
+				"id": "on-overlay-activated",		"c2id": 4,
+				"scriptName": "OnGameOverlayActivated",
+				"isTrigger": true
+			},
+			{
+				"id": "on-overlay-deactivated",		"c2id": 5,
+				"scriptName": "OnGameOverlayDeactivated",
+				"isTrigger": true
+			}
+		],
+		"actions": [
+			{
+				"id": "activate-achievement",		"c2id": 0,
+				"scriptName": "ActivateAchievement",
+				"params": [{ "id": "achievement", "type": "string" }]
+			},
+			{
+				"id": "activate-overlay",		"c2id": 1,
+				"scriptName": "ActivateOverlay",
+				"params": [{
+					"id": "option",
+					"type": "combo",
+					"items": ["friends", "community", "players", "settings", "official-game-group", "stats", "achievements"]
+				}]
+			}
+		]
+	},
+	"user-info": {
+		"expressions": [
+			{
+				"id": "account-id",				"c2id": 0,
+				"expressionName": "AccountID",
+				"returnType": "number"
+			},
+			{
+				"id": "static-account-id",		"c2id": 1,
+				"expressionName": "StaticAccountID",
+				"isDeprecated": true,
+				"returnType": "number"
+			},
+			{
+				"id": "static-account-id-str",
+				"expressionName": "StaticAccountIDStr",
+				"returnType": "string"
+			},
+			{
+				"id": "screen-name",			"c2id": 2,
+				"expressionName": "ScreenName",
+				"returnType": "string"
+			},
+			{
+				"id": "user-level",				"c2id": 3,
+				"expressionName": "UserLevel",
+				"returnType": "number"
+			},
+			{
+				"id": "game-language",			"c2id": 4,
+				"expressionName": "GameLanguage",
+				"returnType": "string"
+			},
+			{
+				"id": "ui-language",			"c2id": 5,
+				"expressionName": "UILanguage",
+				"returnType": "string"
+			}
+		]
+	}
+}
