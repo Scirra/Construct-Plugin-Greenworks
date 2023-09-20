@@ -9,7 +9,7 @@ This repository contains code for the [Greenworks Construct plugin](https://www.
 Before building a usable version of the plugin, you will need the Greenworks node binaries (a set of .node files for each platform). These need to be added alongside the plugin files in the *construct-plugin* subfolder.
 
 > [!WARNING]
-> If you want to modify the plugin for your own purposes, we strongly advise to **change the Construct plugin ID.** This will avoid serious compatibility problems which could result in your project becoming unopenable. For more information see the [Contributing guide](CONTRIBUTING.md).
+> If you want to modify the plugin for your own purposes, we strongly advise to **change the Construct plugin ID.** This will avoid serious compatibility problems which could result in your project becoming unopenable. For more information see the [Contributing guide](https://github.com/Scirra/Construct-Plugin-Greenworks/blob/main/CONTRIBUTING.md).
 
 ## Testing
 
@@ -22,7 +22,7 @@ For details about configuring and exporting projects for Steam, refer to the [Gr
 The Construct plugin is distributed as a [.c3addon file](https://www.construct.net/en/make-games/manuals/addon-sdk/guide/c3addon-file), which is essentially a renamed zip file with the addon files.
 
 > [!WARNING]
-> If you want to modify the plugin for your own purposes, we strongly advise to **change the Construct plugin ID.** This will avoid serious compatibility problems which could result in your project becoming unopenable. For more information see the [Contributing guide](CONTRIBUTING.md).
+> If you want to modify the plugin for your own purposes, we strongly advise to **change the Construct plugin ID.** This will avoid serious compatibility problems which could result in your project becoming unopenable. For more information see the [Contributing guide](https://github.com/Scirra/Construct-Plugin-Greenworks/blob/main/CONTRIBUTING.md).
 
 ## Support
 
@@ -30,7 +30,7 @@ Scirra does not intend to further develop this addon, and we are not expecting t
 
 ## Contributing
 
-Scirra does not intend to further develop this addon. There is some more advice in the [Contributing guide](CONTRIBUTING.md).
+Scirra does not intend to further develop this addon. There is some more advice in the [Contributing guide](https://github.com/Scirra/Construct-Plugin-Greenworks/blob/main/CONTRIBUTING.md).
 
 ## License
 
