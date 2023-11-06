@@ -8,11 +8,7 @@ var fs = require('fs');
 var greenworks;
 
 if (process.platform == 'darwin') {
-  // osx32 support has been dropped in NWjs
-  //if (process.arch == 'x64')
-    greenworks = require('./greenworks-osx64');
-  //else if (process.arch == 'ia32')
-  //  greenworks = require('./greenworks-osx32');
+  greenworks = require('./greenworks-osx');
 } else if (process.platform == 'win32') {
   if (process.arch == 'x64')
     greenworks = require('./greenworks-win64');
