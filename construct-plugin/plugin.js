@@ -42,11 +42,10 @@
 			this._info.SetAuthor("Scirra");
 			this._info.SetHelpUrl(lang(".help-url"));
 			this._info.SetIsSingleGlobal(true);
-			this._info.SetSupportedRuntimes(["c2", "c3"]);
 			this._info.SetDOMSideScripts(["c3runtime/domSide.js"]);
 			
 			this._info.AddFileDependency({
-				filename: "c2runtime/greenworks.js",		// note also used in C3 runtime
+				filename: "c3runtime/greenworks.js",
 				type: "copy-to-output",
 				fileType: "application/javascript"
 			});
