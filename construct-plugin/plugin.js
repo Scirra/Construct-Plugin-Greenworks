@@ -20,7 +20,7 @@
 	const DEPENDENCY_FILES = [
 		"greenworks-linux32.node",
 		"greenworks-linux64.node",
-		"greenworks-osx64.node",
+		"greenworks-osx.node",
 		"greenworks-win32.node",
 		"greenworks-win64.node"
 	];
