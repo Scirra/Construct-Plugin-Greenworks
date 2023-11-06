@@ -12,6 +12,7 @@
 			
 			this._isAvailable = false;
 			this._isGameOverlayEnabled = false;
+			this._isRunningOnSteamDeck = false;
 			
 			this._accountId = 0;
 			this._staticAccountId = "";		// string because is 64-bit number
@@ -26,21 +27,27 @@
 			]);
 			
 			// Get initial state from DOM. Make runtime loading wait for the response.
-			this._runtime.AddLoadPromise(
-				this.PostToDOMAsync("load")
-				.then(data =>
-				{
-					this._isAvailable = data["isAvailable"];
-					this._isGameOverlayEnabled = data["isGameOverlayEnabled"];
-					
-					this._accountId = data["accountId"];
-					this._staticAccountId = data["staticAccountId"];
-					this._screenName = data["screenName"];
-					this._level = data["level"];
-					this._gameLang = data["gameLang"];
-					this._uiLang = data["uiLang"];
-				})
-			);
+			this._runtime.AddLoadPromise(this._Init());
+		}
+
+		async _Init()
+		{
+			const data = await this.PostToDOMAsync("load");
+
+			this._isAvailable = data["isAvailable"];
+
+			if (this._isAvailable)
+			{
+				this._isGameOverlayEnabled = data["isGameOverlayEnabled"];
+				this._isRunningOnSteamDeck = data["isRunningOnSteamDeck"];
+				
+				this._accountId = data["accountId"];
+				this._staticAccountId = data["staticAccountId"];
+				this._screenName = data["screenName"];
+				this._level = data["level"];
+				this._gameLang = data["gameLang"];
+				this._uiLang = data["uiLang"];
+			}
 		}
 		
 		Release()

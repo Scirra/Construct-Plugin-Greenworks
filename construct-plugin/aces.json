@@ -28,6 +28,10 @@
 				"id": "on-overlay-deactivated",		"c2id": 5,
 				"scriptName": "OnGameOverlayDeactivated",
 				"isTrigger": true
+			},
+			{
+				"id": "is-running-on-steam-deck",
+				"scriptName": "IsRunningOnSteamDeck"
 			}
 		],
 		"actions": [

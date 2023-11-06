@@ -20,13 +20,13 @@
 			this._steamId = null;
 			
 			this.AddRuntimeMessageHandlers([
-				["load", e => this._Load(e)],
+				["load", () => this._Load()],
 				["activate-achievement", e => this._OnActivateAchievement(e)],
 				["activate-overlay", e => this._OnActivateOverlay(e)]
 			]);
 		}
 		
-		_Load(e)
+		_Load()
 		{
 			if (this._isNWjs)
 			{
@@ -54,16 +54,27 @@
 				}
 			}
 			
-			return {
-				"isAvailable": this._isAvailable,
-				"isGameOverlayEnabled": (this._isAvailable ? !!this._greenworks["isGameOverlayEnabled"]() : false),
-				"accountId": (this._steamId ? this._steamId["accountId"] : 0),
-				"staticAccountId": (this._steamId ? this._steamId["staticAccountId"].toString() : ""),
-				"screenName": (this._steamId ? this._steamId["screenName"] : ""),
-				"level": (this._steamId ? this._steamId["level"] : 0),
-				"gameLang": (this._greenworks ? this._greenworks["getCurrentGameLanguage"]() : ""),
-				"uiLang": (this._greenworks ? this._greenworks["getCurrentUILanguage"]() : "")
-			};
+			if (this._isAvailable)
+			{
+				return {
+					"isAvailable": true,
+					"isGameOverlayEnabled": !!this._greenworks["isGameOverlayEnabled"](),
+					"isRunningOnSteamDeck": !!this._greenworks["isSteamRunningOnSteamDeck"](),
+					"accountId": (this._steamId ? this._steamId["accountId"] : 0),
+					"staticAccountId": (this._steamId ? this._steamId["staticAccountId"].toString() : ""),
+					"screenName": (this._steamId ? this._steamId["screenName"] : ""),
+					"level": (this._steamId ? this._steamId["level"] : 0),
+					"gameLang": this._greenworks["getCurrentGameLanguage"](),
+					"uiLang": this._greenworks["getCurrentUILanguage"]()
+				};
+			}
+			else
+			{
+				return {
+					"isAvailable": false
+				};
+			}
+			
 		}
 		
 		_OnActivateAchievement(e)

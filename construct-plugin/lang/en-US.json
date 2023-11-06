@@ -6,7 +6,7 @@
 			"greenworks": {
 				"name": "Greenworks",
 				"description": "Access the Steamworks API from NW.js.",
-				"help-url": "https://www.construct.net",
+				"help-url": "https://www.construct.net/make-games/addons/84/greenworks/documentation",
 				"aceCategories": {
 					"steam": "Steam",
 					"user-info": "User info"
@@ -41,6 +41,11 @@
 						"list-name": "On overlay deactivated",
 						"display-text": "On overlay deactivated",
 						"description": "Triggered when the game overlay is hidden."
+					},
+					"is-running-on-steam-deck": {
+						"list-name": "Is running on Steam Deck",
+						"display-text": "Is running on Steam Deck",
+						"description": "True if currently running on a Steam Deck device."
 					}
 				},
 				"actions": {
