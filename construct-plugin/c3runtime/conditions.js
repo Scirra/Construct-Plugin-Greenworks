@@ -33,6 +33,11 @@
 		OnGameOverlayDeactivated()
 		{
 			return true;
+		},
+
+		IsRunningOnSteamDeck()
+		{
+			return this._isRunningOnSteamDeck;
 		}
 	};
 }

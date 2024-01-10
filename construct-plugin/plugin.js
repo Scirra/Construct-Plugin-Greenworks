@@ -13,14 +13,14 @@
 	const PLUGIN_ID = "Greenworks";
 	////////////////////////////////////////////
 	
-	const PLUGIN_VERSION = "1.0.79.0";
+	const PLUGIN_VERSION = "1.0.82.0";
 	const PLUGIN_CATEGORY = "platform-specific";
 	
 	// All these files are specified as "copy-to-output" dependencies
 	const DEPENDENCY_FILES = [
 		"greenworks-linux32.node",
 		"greenworks-linux64.node",
-		"greenworks-osx64.node",
+		"greenworks-osx.node",
 		"greenworks-win32.node",
 		"greenworks-win64.node"
 	];
@@ -42,11 +42,10 @@
 			this._info.SetAuthor("Scirra");
 			this._info.SetHelpUrl(lang(".help-url"));
 			this._info.SetIsSingleGlobal(true);
-			this._info.SetSupportedRuntimes(["c2", "c3"]);
 			this._info.SetDOMSideScripts(["c3runtime/domSide.js"]);
 			
 			this._info.AddFileDependency({
-				filename: "c2runtime/greenworks.js",		// note also used in C3 runtime
+				filename: "c3runtime/greenworks.js",
 				type: "copy-to-output",
 				fileType: "application/javascript"
 			});
