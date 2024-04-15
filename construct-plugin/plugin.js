@@ -13,7 +13,7 @@
 	const PLUGIN_ID = "Greenworks";
 	////////////////////////////////////////////
 	
-	const PLUGIN_VERSION = "1.0.82.0";
+	const PLUGIN_VERSION = "1.0.86.0";
 	const PLUGIN_CATEGORY = "platform-specific";
 	
 	// All these files are specified as "copy-to-output" dependencies
