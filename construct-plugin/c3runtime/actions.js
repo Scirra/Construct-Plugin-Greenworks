@@ -1,48 +1,45 @@
-"use strict";
 
+const C3 = self.C3;
+
+const OVERLAY_OPTIONS = [
+	"Friends",
+	"Community",
+	"Players",
+	"Settings",
+	"OfficialGameGroup",
+	"Stats",
+	"Achievements"
+];
+
+C3.Plugins.Greenworks.Acts =
 {
-	const C3 = self.C3;
-
-	const OVERLAY_OPTIONS = [
-		"Friends",
-		"Community",
-		"Players",
-		"Settings",
-		"OfficialGameGroup",
-		"Stats",
-		"Achievements"
-	];
-	
-	C3.Plugins.Greenworks.Acts =
+	ActivateAchievement(achievement)
 	{
-		ActivateAchievement(achievement)
-		{
-			if (!this._isAvailable)
-				return;
-			
-			this.PostToDOMAsync("activate-achievement", {
-				"achievement": achievement
-			})
-			.then(() =>
-			{
-				this.Trigger(C3.Plugins.Greenworks.Cnds.OnAchievementActivateSuccess);
-			})
-			.catch(err =>
-			{
-				console.warn("[Construct 3] Greenworks: error activating achievement: ", err);
-				
-				this.Trigger(C3.Plugins.Greenworks.Cnds.OnAchievementActivateError);
-			});
-		},
+		if (!this._isAvailable)
+			return;
 		
-		ActivateOverlay(option)
+		this._postToDOMAsync("activate-achievement", {
+			"achievement": achievement
+		})
+		.then(() =>
 		{
-			if (!this._isAvailable)
-				return;
+			this._trigger(C3.Plugins.Greenworks.Cnds.OnAchievementActivateSuccess);
+		})
+		.catch(err =>
+		{
+			console.warn("[Construct 3] Greenworks: error activating achievement: ", err);
 			
-			this.PostToDOM("activate-overlay", {
-				"option": OVERLAY_OPTIONS[option]
-			});
-		}
-	};
-}
+			this._trigger(C3.Plugins.Greenworks.Cnds.OnAchievementActivateError);
+		});
+	},
+	
+	ActivateOverlay(option)
+	{
+		if (!this._isAvailable)
+			return;
+		
+		this._postToDOM("activate-overlay", {
+			"option": OVERLAY_OPTIONS[option]
+		});
+	}
+};

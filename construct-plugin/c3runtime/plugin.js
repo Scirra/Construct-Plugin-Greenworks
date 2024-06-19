@@ -1,18 +1,10 @@
-"use strict";
 
+const C3 = self.C3;
+
+C3.Plugins.Greenworks = class GreenworksPlugin extends globalThis.ISDKPluginBase
 {
-	const C3 = self.C3;
-	
-	C3.Plugins.Greenworks = class GreenworksPlugin extends C3.SDKPluginBase
+	constructor()
 	{
-		constructor(opts)
-		{
-			super(opts);
-		}
-		
-		Release()
-		{
-			super.Release();
-		}
-	};
-}
+		super();
+	}
+};

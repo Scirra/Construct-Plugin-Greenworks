@@ -13,7 +13,6 @@
 	const PLUGIN_ID = "Greenworks";
 	////////////////////////////////////////////
 	
-	const PLUGIN_VERSION = "1.0.86.0";
 	const PLUGIN_CATEGORY = "platform-specific";
 	
 	// All these files are specified as "copy-to-output" dependencies
@@ -37,7 +36,6 @@
 			
 			this._info.SetName(lang(".name"));
 			this._info.SetDescription(lang(".description"));
-			this._info.SetVersion(PLUGIN_VERSION);
 			this._info.SetCategory(PLUGIN_CATEGORY);
 			this._info.SetAuthor("Scirra");
 			this._info.SetHelpUrl(lang(".help-url"));
