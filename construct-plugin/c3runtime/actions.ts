@@ -1,4 +1,6 @@
 
+import type { SDKInstanceClass } from "./instance.ts";
+
 const C3 = self.C3;
 
 const OVERLAY_OPTIONS = [
@@ -13,7 +15,7 @@ const OVERLAY_OPTIONS = [
 
 C3.Plugins.Greenworks.Acts =
 {
-	ActivateAchievement(achievement)
+	async ActivateAchievement(this: SDKInstanceClass, achievement: string)
 	{
 		if (!this._isAvailable)
 			return;
@@ -33,7 +35,7 @@ C3.Plugins.Greenworks.Acts =
 		});
 	},
 	
-	ActivateOverlay(option)
+	ActivateOverlay(this: SDKInstanceClass, option: number)
 	{
 		if (!this._isAvailable)
 			return;

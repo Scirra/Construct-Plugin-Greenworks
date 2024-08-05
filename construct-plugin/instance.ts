@@ -3,7 +3,7 @@ const PLUGIN_CLASS = SDK.Plugins.Greenworks;
 
 PLUGIN_CLASS.Instance = class GreenworksInstance extends SDK.IInstanceBase
 {
-	constructor(sdkType, inst)
+	constructor(sdkType: SDK.ITypeBase, inst: SDK.IObjectInstance)
 	{
 		super(sdkType, inst);
 	}
@@ -16,12 +16,14 @@ PLUGIN_CLASS.Instance = class GreenworksInstance extends SDK.IInstanceBase
 	{
 	}
 	
-	OnPropertyChanged(id, value)
+	OnPropertyChanged(id: string, value: EditorPropertyValueType)
 	{
 	}
 	
-	LoadC2Property(name, valueString)
+	LoadC2Property(name: string, valueString: string)
 	{
 		return false;		// not handled
 	}
 };
+
+export {}

@@ -58,4 +58,5 @@ const PLUGIN_CLASS = SDK.Plugins.Greenworks = class Greenworks extends SDK.IPlug
 };
 
 PLUGIN_CLASS.Register(PLUGIN_ID, PLUGIN_CLASS);
-	
+
+export {}

@@ -1,4 +1,7 @@
-﻿{
+﻿
+{
+	"$schema": "../../plugin.lang.schema.json",
+	
 	"languageTag": "en-US",
 	"fileDescription": "Strings for the Greenworks plugin.",
 	"text": {

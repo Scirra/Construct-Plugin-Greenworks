@@ -1,14 +1,16 @@
 
+import type { SDKInstanceClass } from "./instance.ts";
+
 const C3 = self.C3;
 
 C3.Plugins.Greenworks.Exps =
 {
-	AccountID()
+	AccountID(this: SDKInstanceClass)
 	{
 		return this._accountId;
 	},
 	
-	StaticAccountID()
+	StaticAccountID(this: SDKInstanceClass)
 	{
 		// Deprecated expression for backwards compatibility. Return as number,
 		// which is lossy since it can be over MAX_SAFE_INTEGER.
@@ -16,27 +18,27 @@ C3.Plugins.Greenworks.Exps =
 		return isFinite(ret) ? ret : 0;
 	},
 	
-	StaticAccountIDStr()
+	StaticAccountIDStr(this: SDKInstanceClass)
 	{
 		return this._staticAccountId;
 	},
 	
-	ScreenName()
+	ScreenName(this: SDKInstanceClass)
 	{
 		return this._screenName;
 	},
 	
-	UserLevel()
+	UserLevel(this: SDKInstanceClass)
 	{
 		return this._level;
 	},
 	
-	GameLanguage()
+	GameLanguage(this: SDKInstanceClass)
 	{
 		return this._gameLang;
 	},
 	
-	UILanguage()
+	UILanguage(this: SDKInstanceClass)
 	{
 		return this._uiLang;
 	}
