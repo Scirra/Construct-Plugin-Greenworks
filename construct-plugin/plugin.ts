@@ -36,6 +36,7 @@ const PLUGIN_CLASS = SDK.Plugins.Greenworks = class Greenworks extends SDK.IPlug
 		this._info.SetHelpUrl(lang(".help-url"));
 		this._info.SetIsSingleGlobal(true);
 		this._info.SetDOMSideScripts(["c3runtime/domSide.js"]);
+		this._info.SetRuntimeModuleMainScript("c3runtime/main.js");
 		
 		this._info.AddFileDependency({
 			filename: "c3runtime/greenworks.js",

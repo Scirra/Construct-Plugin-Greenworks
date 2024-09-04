@@ -25,7 +25,7 @@ C3.Plugins.Greenworks.Instance = class GreenworksInstance extends globalThis.ISD
 		]);
 		
 		// Get initial state from DOM. Make runtime loading wait for the response.
-		this.runtime.addLoadPromise(this._init());
+		this.runtime.sdk.addLoadPromise(this._init());
 	}
 
 	async _init()

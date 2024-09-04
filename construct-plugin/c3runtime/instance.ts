@@ -36,7 +36,7 @@ class GreenworksInstance extends globalThis.ISDKInstanceBase
 		]);
 		
 		// Get initial state from DOM. Make runtime loading wait for the response.
-		this.runtime.addLoadPromise(this._init());
+		this.runtime.sdk.addLoadPromise(this._init());
 	}
 
 	async _init()
