@@ -1,5 +1,5 @@
 # Greenworks plugin
-This repository contains code for the [Greenworks Construct plugin](https://www.construct.net/en/make-games/addons/84/greenworks). This plugin uses the [Greenworks library](https://github.com/greenheartgames/greenworks) to interact with the Steamworks SDK when using the NW.js exporter.
+This repository contains code for the [Greenworks Construct plugin](https://www.construct.net/en/make-games/addons/84/greenworks-for-nw-js). This plugin uses the [Greenworks library](https://github.com/greenheartgames/greenworks) to interact with the Steamworks SDK when using the NW.js exporter.
 
 > [!NOTE]
 > Where possible we advise using the [Steamworks for WebView2](https://github.com/Scirra/Construct-Plugin-Steamworks) plugin instead. Scirra does not intend to further develop this addon, but it is occasionally updated to support new NW.js/Steamworks SDK versions, and the code is open sourced to help anyone who wishes to customize it.
@@ -15,7 +15,7 @@ Before building a usable version of the plugin, you will need the Greenworks nod
 
 Use [developer mode](https://www.construct.net/en/make-games/manuals/addon-sdk/guide/using-developer-mode) for a more convenient way to test the Construct plugin during development.
 
-For details about configuring and exporting projects for Steam, refer to the [Greenworks plugin documentation](https://www.construct.net/en/make-games/addons/84/greenworks/documentation).
+For details about configuring and exporting projects for Steam, refer to the [Greenworks plugin documentation](https://www.construct.net/en/make-games/addons/84/greenworks-for-nw-js/documentation).
 
 ## Distributing
 
